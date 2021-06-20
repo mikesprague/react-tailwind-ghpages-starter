@@ -1,7 +1,7 @@
 {
-  "name": "",
-  "short_name": "",
-  "description": "",
+  "name": "Tailwind CSS/React PWA Template",
+  "short_name": "tailwindcss-react-pwa-template",
+  "description": "Template for Tailwind CSS/React-based PWA hosted on GitHub Pages. Uses GitHub Actions to build and deploy site.",
   "author": "Michael Sprague",
   "icons": [
     {
@@ -35,7 +35,7 @@
       "sizes": "128x128"
     }
   ],
-  "homepage_url": "https://your-url/",
+  "homepage_url": "https://react-tailwind-netlify-starter.netlify.app/",
   "scope": "/",
   "start_url": "/",
   "display": "standalone",
