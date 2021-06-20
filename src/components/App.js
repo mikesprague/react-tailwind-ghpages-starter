@@ -31,7 +31,7 @@ export default function App() {
         <h2 className="mb-12 text-2xl font-semibold leading-tight text-center">
           <small className="text-base font-normal text-center">
             <a href="https://icanhazdadjoke.com/api" rel="noopener noreferrer" target="_blank">
-              (datasource: https://icanhazdadjoke.com/api)
+              datasource: https://icanhazdadjoke.com/api
             </a>
           </small>
         </h2>
