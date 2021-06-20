@@ -1,0 +1,32 @@
+name: Production Build
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - "README.md"
+  pull_request:
+    branches: [ main ]
+    paths-ignore:
+      - "README.md"
+
+  workflow_dispatch:
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Install Dependencies (yarn)
+        run: yarn
+      - name: Build Site (webpack)
+        run: yarn build
+      - name: Deploy Site (gh pages)
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
