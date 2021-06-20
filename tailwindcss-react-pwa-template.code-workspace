@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"cflint.enabled": false,
+		"scss.validate": false
+	},
+}
+

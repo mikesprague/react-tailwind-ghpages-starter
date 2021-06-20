@@ -1,0 +1,15 @@
+// sass-lint:disable no-important no-vendor-prefixes
+$color-body-bg: #121212;
+$color-body-text: #efefef;
+
+* {
+  -moz-osx-font-smoothing: grayscale !important;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  text-rendering: optimizeLegibility !important;
+}
+
+html,
+body {
+  background-color: $color-body-bg;
+  color: $color-body-text;
+}
