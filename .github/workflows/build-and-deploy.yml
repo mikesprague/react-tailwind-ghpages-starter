@@ -5,10 +5,16 @@ on:
     branches: [ main ]
     paths-ignore:
       - "README.md"
+      - "LICENSE"
+      - ".editorConfig"
+      - "tailwindcss-react-pwa-template.code-workspace"
   pull_request:
     branches: [ main ]
     paths-ignore:
       - "README.md"
+      - "LICENSE"
+      - ".editorConfig"
+      - "tailwindcss-react-pwa-template.code-workspace"
 
   workflow_dispatch:
 
@@ -22,7 +28,7 @@ jobs:
         run: yarn
       - name: Build Site (webpack)
         run: yarn build
-      - name: Deploy Site (gh pages)
+      - name: Deploy Site (gh-pages)
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
