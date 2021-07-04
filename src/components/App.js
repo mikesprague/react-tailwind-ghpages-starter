@@ -20,9 +20,9 @@ export default function App() {
 
   return (
     <>
-      <div className="container max-w-screen-xl min-h-screen p-8 text-center page-wrapper">
+      <div className="container max-w-screen-xl min-h-screen px-6 py-20 text-center page-wrapper">
         <h1 className="mb-8 text-4xl font-bold text-center underline">
-          My Tailwind CSS/React PWA Starter Template
+          Tailwind CSS/React PWA Starter Template
           <br />
         </h1>
         <blockquote className="mx-auto text-3xl italic leading-normal text-center text-blue-200">
