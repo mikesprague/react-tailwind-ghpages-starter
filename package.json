@@ -1,7 +1,7 @@
 {
-  "name": "tailwindcss-react-pwa-template",
+  "name": "tailwindcss-react-ghpages-starter",
   "version": "0.1.0",
-  "description": "Template for Tailwind CSS/React-based PWA hosted on GitHub Pages. Uses GitHub Actions to build and deploy site.",
+  "description": "Barebones starter for a Tailwind CSS/React-based PWA hosted on GitHub Pages. Uses GitHub Actions to build and deploy site.",
   "private": true,
   "engines": {
     "node": ">= 14.x",
@@ -19,7 +19,7 @@
     "webpack:serve": "cross-env NODE_ENV=development webpack serve"
   },
   "repository": {
-    "url": "https://github.com/mikesprague/tailwindcss-react-pwa-template"
+    "url": "https://github.com/mikesprague/tailwindcss-react-ghpages-starter"
   },
   "keywords": [],
   "author": {
@@ -28,9 +28,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mikesprague/tailwindcss-react-pwa-template/issues"
+    "url": "https://github.com/mikesprague/tailwindcss-react-ghpages-starter/issues"
   },
-  "homepage": "https://mikesprague.github.io/tailwindcss-react-pwa-template",
+  "homepage": "https://mikesprague.github.io/tailwindcss-react-ghpages-starter",
   "dependencies": {
     "@hot-loader/react-dom": "^17.0.1",
     "@tailwindcss/typography": "^0.4.1",
