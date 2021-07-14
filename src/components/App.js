@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { FaQuoteLeft, FaGithub } from 'react-icons/fa';
 import './App.scss';
 
 export default function App() {
@@ -26,7 +27,7 @@ export default function App() {
           <br />
         </h1>
         <blockquote className="mx-auto text-3xl italic leading-normal text-center text-blue-200">
-          {data ? <>{data.joke}</> : '... loading dad joke ...'}
+          {data ? <><FaQuoteLeft />{` ${data.joke}`}</> : '... loading dad joke ...'}
         </blockquote>
         <h2 className="mb-12 text-2xl font-semibold leading-tight text-center">
           <small className="text-base font-normal text-center">
@@ -37,7 +38,10 @@ export default function App() {
         </h2>
       </div>
       <div className="fixed min-w-full text-base text-center bottom-2">
-        <a href="https://github.com/mikesprague/tailwindcss-react-pwa-template">Back to repo</a>
+        <a href="https://github.com/mikesprague/tailwindcss-react-pwa-template">
+	  <FaGithub/> 
+	  {` Back to repo`}
+	</a>
       </div>
     </>
   );
