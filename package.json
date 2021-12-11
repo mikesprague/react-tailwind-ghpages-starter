@@ -33,21 +33,21 @@
   "homepage": "https://mikesprague.github.io/tailwindcss-react-ghpages-starter",
   "dependencies": {
     "@hot-loader/react-dom": "^17.0.1",
-    "@tailwindcss/typography": "^0.4.1",
-    "axios": "^0.21.4",
+    "@tailwindcss/typography": "^0.5.0",
+    "axios": "^0.24.0",
     "cross-env": "^7.0.3",
     "dayjs": "^1.10.7",
     "dotenv": "^10.0.0",
     "he": "^1.2.0",
-    "nanoid": "^3.1.28",
+    "nanoid": "^3.1.30",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-hot-loader": "^4.13.0",
-    "react-icons": "^4.2.0",
+    "react-icons": "^4.3.1",
     "register-service-worker": "^1.7.2",
-    "snyk": "^1.722.0",
-    "tailwindcss": "^2.2.16"
+    "snyk": "^1.789.0",
+    "tailwindcss": "^3.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
