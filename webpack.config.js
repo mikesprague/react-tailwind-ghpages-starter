@@ -89,7 +89,6 @@ const webpackPlugins = [
     skipWaiting: true,
   }),
   new CompressionPlugin(),
-  new webpack.HotModuleReplacementPlugin(),
 ];
 
 module.exports = {
@@ -97,9 +96,6 @@ module.exports = {
   devtool: 'source-map',
   resolve: {
     extensions: ['*', '.js', '.jsx'],
-    alias: {
-      'react-dom': '@hot-loader/react-dom',
-    },
   },
   output: {
     filename: './js/[name].js',

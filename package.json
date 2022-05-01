@@ -34,7 +34,6 @@
   },
   "homepage": "https://mikesprague.github.io/tailwindcss-react-ghpages-starter",
   "dependencies": {
-    "@hot-loader/react-dom": "^17.0.2",
     "@tailwindcss/typography": "^0.5.2",
     "axios": "^0.27.2",
     "cross-env": "^7.0.3",
@@ -45,7 +44,6 @@
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "react-hot-loader": "^4.13.0",
     "react-icons": "^4.3.1",
     "register-service-worker": "^1.7.2",
     "tailwindcss": "^3.0.24"
@@ -64,7 +62,6 @@
     "@babel/preset-react": "^7.16.7",
     "@babel/runtime": "^7.17.9",
     "@fullhuman/postcss-purgecss": "^4.1.3",
-    "@hot-loader/react-dom": "^17.0.2",
     "@octokit/core": "^3.6.0",
     "@typescript-eslint/eslint-plugin": "^5.21.0",
     "@typescript-eslint/parser": "^5.21.0",
@@ -122,8 +119,7 @@
       "@babel/plugin-syntax-dynamic-import",
       "@babel/plugin-transform-object-assign",
       "@babel/plugin-transform-runtime",
-      "add-react-displayname",
-      "react-hot-loader/babel"
+      "add-react-displayname"
     ],
     "presets": [
       "@babel/preset-env",
