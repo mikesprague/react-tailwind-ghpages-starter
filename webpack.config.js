@@ -107,14 +107,6 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
   },
   mode,
-  devServer: {
-    contentBase: path.join(__dirname, 'public/'),
-    hotOnly: true,
-    open: true,
-    port: 3000,
-    publicPath: 'http://localhost:3000/',
-    stats: 'minimal',
-  },
   module: {
     rules: webpackRules,
   },

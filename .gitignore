@@ -106,3 +106,4 @@ dist
 # Misc
 .history/
 
+build/
