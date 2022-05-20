@@ -1,12 +1,11 @@
 require('dotenv').config();
 const path = require('path');
 const webpack = require('webpack');
+const { ESBuildMinifyPlugin } = require('esbuild-loader');
 const CompressionPlugin = require('compression-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 
 const mode = process.env.NODE_ENV;
@@ -32,6 +31,13 @@ const webpackRules = [
           sourceMap: true,
         },
       },
+      {
+        loader: 'esbuild-loader',
+        options: {
+          loader: 'css',
+          minify: true,
+        },
+      },
     ],
   },
   {
@@ -39,7 +45,11 @@ const webpackRules = [
     exclude: [/node_modules/, /service-worker.js/],
     use: [
       {
-        loader: 'babel-loader',
+        loader: 'esbuild-loader',
+        options: {
+          target: 'esnext',
+          loader: 'jsx',
+        },
       },
     ],
   },
@@ -108,10 +118,10 @@ module.exports = {
   },
   optimization: {
     minimizer: [
-      new TerserPlugin({
-        parallel: true,
+      new ESBuildMinifyPlugin({
+        target: 'es2015',
+        css: true,
       }),
-      new CssMinimizerPlugin(),
     ],
   },
   plugins: webpackPlugins,
