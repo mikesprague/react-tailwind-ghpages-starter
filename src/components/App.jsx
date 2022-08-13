@@ -1,10 +1,12 @@
-import axios from 'axios';
+import { FaGithub, FaQuoteLeft } from 'react-icons/fa';
 import React, { useEffect, useState } from 'react';
-import { FaQuoteLeft, FaGithub } from 'react-icons/fa';
+import axios from 'axios';
+
 import './App.scss';
 
 export default function App() {
   const [data, setData] = useState(null);
+
   useEffect(() => {
     const getRemoteData = async () => {
       const remoteData = await axios
@@ -14,8 +16,10 @@ export default function App() {
           },
         })
         .then((response) => response.data);
+
       setData(remoteData);
     };
+
     getRemoteData();
   }, []);
 
@@ -27,7 +31,14 @@ export default function App() {
           <br />
         </h1>
         <blockquote className="mx-auto text-3xl italic leading-normal text-center text-blue-200">
-          {data ? <><FaQuoteLeft />{` ${data.joke}`}</> : '... loading dad joke ...'}
+          {data ? (
+            <>
+              <FaQuoteLeft />
+              {` ${data.joke}`}
+            </>
+          ) : (
+            '... loading dad joke ...'
+          )}
         </blockquote>
         <h2 className="mb-12 text-2xl font-semibold leading-tight text-center">
           <small className="text-base font-normal text-center">
@@ -39,9 +50,9 @@ export default function App() {
       </div>
       <div className="fixed min-w-full text-base text-center bottom-2">
         <a href="https://github.com/mikesprague/tailwindcss-react-pwa-template">
-	  <FaGithub/> 
-	  {` Back to repo`}
-	</a>
+          <FaGithub />
+          {` Back to repo`}
+        </a>
       </div>
     </>
   );

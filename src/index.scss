@@ -3,7 +3,6 @@
 @tailwind components;
 // purgecss end ignore
 
-@tailwind utilities;
 
 * {
   @apply antialiased;
@@ -16,3 +15,5 @@ body {
   @apply font-sans;
   @apply mx-auto;
 }
+
+@tailwind utilities;
