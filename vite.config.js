@@ -5,12 +5,12 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   root: 'src',
   build: {
-    // Relative to the root
     outDir: '../build',
   },
   publicDir: '../public',
   base: './',
   outDir: './',
+  appType: 'custom',
   plugins: [
     VitePWA({
       registerType: 'autoUpdate',
