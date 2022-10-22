@@ -47,7 +47,7 @@ jobs:
         run: npm run build
 
       - name: 🏗️ Setup Pages
-        uses: actions/configure-pages@v1
+        uses: actions/configure-pages@v2
       
       - name: 📦 Create and Upload artifact
         uses: actions/upload-pages-artifact@v1
