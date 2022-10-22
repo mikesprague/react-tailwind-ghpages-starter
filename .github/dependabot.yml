@@ -1,5 +1,12 @@
 version: 2
 updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "10:00"
+      timezone: "America/New_York"
+    target-branch: "main"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
@@ -7,3 +14,4 @@ updates:
       time: "10:00"
       timezone: "America/New_York"
     target-branch: "main"
+
