@@ -52,6 +52,7 @@
     "autoprefixer": "10.4.13",
     "babel-plugin-add-react-displayname": "0.0.5",
     "cssnano": "5.1.14",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "8.28.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "8.5.0",
@@ -160,5 +161,10 @@
     "singleQuote": true,
     "tabwidth": true,
     "trailingComma": "all"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
