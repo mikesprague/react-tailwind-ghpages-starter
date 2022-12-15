@@ -85,4 +85,4 @@ jobs:
     secrets:
       REPO_TOKEN: ${{ secrets.GITHUB_TOKEN}}
     with:
-      url: 'https://mikesprague.github.io/tailwindcss-react-ghpages-starter/'
+      url: ${{ needs.call-deploy-workflow.outputs.url }}
