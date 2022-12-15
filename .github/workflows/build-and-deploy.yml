@@ -91,7 +91,7 @@ jobs:
         id: lhci
         uses: treosh/lighthouse-ci-action@v9
         with:
-          urls: 'https://mikesprague.github.io/tailwindcss-react-ghpages-starter/'
+          urls: ${{ needs.call-deploy-workflow.outputs.url }}
           uploadArtifacts: false
           temporaryPublicStorage: true
       - name: Get Lighthouse Report URL
