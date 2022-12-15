@@ -78,3 +78,16 @@ jobs:
       REPO_TOKEN: ${{ secrets.GITHUB_TOKEN}}
     with:
       artifact-name: pwa-artifact
+  
+  lighthouse:
+    needs: [call-deploy-workflow]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Audit URLs using Lighthouse
+        id: lhci
+        uses: treosh/lighthouse-ci-action@v9
+        with:
+          urls: 'https://mikesprague.github.io/tailwindcss-react-ghpages-starter/'
+          uploadArtifacts: false
+          temporaryPublicStorage: true
