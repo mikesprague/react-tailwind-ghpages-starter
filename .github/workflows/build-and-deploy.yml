@@ -92,4 +92,4 @@ jobs:
           uploadArtifacts: false
           temporaryPublicStorage: true
       - name: echo
-        run: echo ${{ steps.lhci.outputs.links }} | jq -r first(.[])
+        run: echo ${{ steps.lhci.outputs.links }} | jq -r 'first(.[])'
