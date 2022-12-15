@@ -91,3 +91,5 @@ jobs:
           urls: 'https://mikesprague.github.io/tailwindcss-react-ghpages-starter/'
           uploadArtifacts: false
           temporaryPublicStorage: true
+      - name: echo
+        run: echo '${{ lhci.links }}'
