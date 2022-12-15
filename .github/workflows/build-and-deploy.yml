@@ -31,10 +31,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build_and_deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: 👷 Checkout Repo
@@ -46,14 +43,17 @@ jobs:
       - name: 🏗️ Build Site with Vite
         run: npm run build
 
-      - name: 🏗️ Setup Pages
-        uses: actions/configure-pages@v2
-      
-      - name: 📦 Create and Upload artifact
-        uses: actions/upload-pages-artifact@v1
+      - name: 📦 Create and upload build artifact
+        uses: actions/upload-artifact@v3
         with:
+          name: pwa-artifact
           path: 'build/'
+          retention-days: 1
 
-      - name: 🚀 Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@main
+  call-deploy-workflow:
+    needs: [build]
+    uses: mikesprague/reusable-workflows/.github/workflows/pages-deploy.yml@main
+    secrets:
+      REPO_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+    with:
+      artifact-name: pwa-artifact
