@@ -96,4 +96,4 @@ jobs:
           temporaryPublicStorage: true
       - name: Get Lighthouse Report URL
         id: report
-        run: echo url='${{ steps.lhci.outputs.links }}' | jq -r 'first(.[])' >> $GITHUB_OUTPUT
+        run: echo url=$(echo '${{ steps.lhci.outputs.links }}' | jq -r 'first(.[])') >> $GITHUB_OUTPUT
