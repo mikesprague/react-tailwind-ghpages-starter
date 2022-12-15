@@ -78,23 +78,11 @@ jobs:
       REPO_TOKEN: ${{ secrets.GITHUB_TOKEN}}
     with:
       artifact-name: pwa-artifact
-  
-  lighthouse:
+
+  call-lighthouse-workflow:
     needs: [call-deploy-workflow]
-    environment:
-      name: lighthouse-report
-      url: ${{ steps.report.outputs.url }}
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo ${{needs.call-deploy-workflow.outputs.url}}
-      - uses: actions/checkout@v3
-      - name: Audit URLs using Lighthouse
-        id: lhci
-        uses: treosh/lighthouse-ci-action@v9
-        with:
-          urls: 'https://mikesprague.github.io/tailwindcss-react-ghpages-starter/'
-          uploadArtifacts: false
-          temporaryPublicStorage: true
-      - name: Get Lighthouse Report URL
-        id: report
-        run: echo url=$(echo '${{ steps.lhci.outputs.links }}' | jq -r 'first(.[])') >> $GITHUB_OUTPUT
+    uses: mikesprague/reusable-workflows/.github/workflows/lighthouse.yml@main
+    secrets:
+      REPO_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+    with:
+      url: 'https://mikesprague.github.io/tailwindcss-react-ghpages-starter/'
