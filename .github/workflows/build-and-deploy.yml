@@ -81,6 +81,9 @@ jobs:
   
   lighthouse:
     needs: [call-deploy-workflow]
+    environment:
+      name: lighthouse-report
+      url: ${{ steps.report.outputs.url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -91,5 +94,6 @@ jobs:
           urls: 'https://mikesprague.github.io/tailwindcss-react-ghpages-starter/'
           uploadArtifacts: false
           temporaryPublicStorage: true
-      - name: echo
-        run: echo '${{ steps.lhci.outputs.links }}' | jq -r 'first(.[])'
+      - name: Get Lighthouse Report URL
+        id: report
+        run: echo url='${{ steps.lhci.outputs.links }}' | jq -r 'first(.[])' >> $GITHUB_OUTPUT
