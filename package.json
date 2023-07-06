@@ -43,7 +43,7 @@
     "react-icons": "4.10.1"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "7.22.6",
+    "@babel/eslint-parser": "7.22.7",
     "@babel/eslint-plugin": "7.22.5",
     "@babel/preset-env": "7.22.6",
     "@babel/preset-react": "7.22.5",
