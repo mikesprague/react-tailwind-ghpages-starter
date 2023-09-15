@@ -1,6 +1,6 @@
-import { FaGithub, FaQuoteLeft } from 'react-icons/fa';
-import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { FaGithub, FaQuoteLeft } from 'react-icons/fa';
 
 import './App.scss';
 
@@ -28,7 +28,9 @@ export default function App() {
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content text-center">
           <div className="">
-            <h1 className="text-5xl font-bold">Tailwind CSS/React PWA Starter Template</h1>
+            <h1 className="text-5xl font-bold">
+              React/Tailwind PWA Starter Template
+            </h1>
             <blockquote className="mx-auto text-3xl italic leading-normal text-center text-blue-200">
               {data ? (
                 <>
@@ -41,7 +43,11 @@ export default function App() {
             </blockquote>
             <h2 className="my-12 text-2xl font-semibold leading-tight text-center">
               <small className="text-base font-normal text-center">
-                <a href="https://icanhazdadjoke.com/api" rel="noopener noreferrer" target="_blank">
+                <a
+                  href="https://icanhazdadjoke.com/api"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
                   source: https://icanhazdadjoke.com/api
                 </a>
               </small>
@@ -52,7 +58,7 @@ export default function App() {
       <div className="fixed min-w-full text-base text-center bottom-2">
         <a href="https://github.com/mikesprague/tailwindcss-react-pwa-template">
           <FaGithub />
-          {` Back to repo`}
+          {' Back to repo'}
         </a>
       </div>
     </>

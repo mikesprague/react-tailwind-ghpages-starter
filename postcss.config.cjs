@@ -7,7 +7,11 @@ module.exports = {
       preset: 'default',
     }),
     require('@fullhuman/postcss-purgecss')({
-      content: ['./src/index.html', './src/index.js', './src/components/**/*.jsx'],
+      content: [
+        './src/index.html',
+        './src/index.js',
+        './src/components/**/*.jsx',
+      ],
       fontFace: false,
       safelist: [],
     }),
