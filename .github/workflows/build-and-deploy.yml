@@ -11,7 +11,7 @@ on:
       - ".github/workflows/**.yml"
   pull_request:
     branches: [ main ]
-    paths-ignore:
+    paths:
       - "src/**/*.*"
       - "public/**/*.*"
       - "package.json"
@@ -31,7 +31,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  NODE_VERSION: "18"
+  NODE_VERSION: "20"
 
 jobs:
   build:
@@ -60,7 +60,7 @@ jobs:
       - name: 🏗️ Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
-      
+
       - name: 🏗️ Build Site with Vite
         run: npm run build
 
