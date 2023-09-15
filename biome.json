@@ -6,7 +6,6 @@
       "**/.git/*",
       "**/.github/*",
       "**/.history/*",
-      "**/.wrangler/*",
       "**/.vscode/*",
       "**/node_modules/*",
       "**/public/*"
