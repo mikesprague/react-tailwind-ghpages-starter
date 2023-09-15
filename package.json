@@ -1,10 +1,10 @@
 {
   "name": "react-tailwind-ghpages-starter",
   "version": "0.1.0",
-  "description": "Barebones starter for a Tailwind CSS/React-based PWA hosted on GitHub Pages. Uses GitHub Actions to build and deploy site.",
+  "description": "Barebones starter for a React/Tailwind CSS PWA hosted via GitHub Pages. Uses GitHub Actions to build and deploy site.",
   "private": true,
   "engines": {
-    "node": ">= 16.x",
+    "node": ">= 18.x",
     "npm": ">= 8.x"
   },
   "type": "module",
@@ -17,7 +17,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "url": "https://github.com/mikesprague/tailwindcss-react-ghpages-starter"
+    "url": "https://github.com/mikesprague/react-tailwind-ghpages-starter"
   },
   "keywords": [],
   "author": {
@@ -26,9 +26,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mikesprague/tailwindcss-react-ghpages-starter/issues"
+    "url": "https://github.com/mikesprague/react-tailwind-ghpages-starter/issues"
   },
-  "homepage": "https://mikesprague.github.io/tailwindcss-react-ghpages-starter",
+  "homepage": "https://mikesprague.github.io/react-tailwind-ghpages-starter",
   "dependencies": {
     "axios": "1.5.0",
     "cross-env": "7.0.3",
