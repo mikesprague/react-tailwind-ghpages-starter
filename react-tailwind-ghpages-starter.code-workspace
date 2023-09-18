@@ -28,8 +28,8 @@
       "editor.defaultFormatter": "stylelint.vscode-stylelint"
     },
     "editor.codeActionsOnSave": {
-      "quickfix.biome": true,
-      "source.organizeImports.biome": true
+      "quickfix.biome": "always",
+      "source.organizeImports.biome": "always"
     },
     "scss.validate": false,
     "stylelint.validate": [
