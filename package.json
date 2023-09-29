@@ -9,10 +9,10 @@
   },
   "type": "module",
   "scripts": {
-    "build": "vite build",
+    "build": "npx vite build",
     "clean": "rm -rf ./build",
-    "dev": "vite serve",
-    "preview": "vite preview",
+    "dev": "npx vite serve",
+    "preview": "npx vite preview",
     "start": "npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -48,7 +48,6 @@
     "@tailwindcss/typography": "0.5.10",
     "@vitejs/plugin-react-swc": "3.4.0",
     "autoprefixer": "10.4.16",
-    "babel-plugin-add-react-displayname": "0.0.5",
     "cssnano": "6.0.1",
     "cz-git": "^1.7.1",
     "postcss": "8.4.30",
