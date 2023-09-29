@@ -40,11 +40,13 @@
       "scss",
       "source.css.styled",
       "source.markdown.math",
-      "styled-css"
+      "styled-css",
+      "source.css.embedded.html",
+      "source.html.embedded.css"
     ],
     "cSpell.words": ["bluegray", "coolgray", "ghpages", "truegray", "warmgray"]
   },
   "extensions": {
-    "recommendations": ["biomejs.biome"]
+    "recommendations": ["biomejs.biome", "stylelint.vscode-stylelint"]
   }
 }
