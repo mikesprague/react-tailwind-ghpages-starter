@@ -56,7 +56,7 @@ export default function App() {
         </div>
       </div>
       <div className="fixed min-w-full text-base text-center bottom-2">
-        <a href="https://github.com/mikesprague/tailwindcss-react-pwa-template">
+        <a href="https://github.com/mikesprague/react-tailwind-ghpages-starter">
           <FaGithub />
           {' Back to repo'}
         </a>

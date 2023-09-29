@@ -1,4 +1,6 @@
-// Export all plugins our postcss should use
+// safelist any necessary classes here
+const cssSafelistClassArray = [];
+
 module.exports = {
   plugins: [
     require('autoprefixer'),
@@ -9,11 +11,11 @@ module.exports = {
     require('@fullhuman/postcss-purgecss')({
       content: [
         './src/index.html',
-        './src/index.js',
+        './src/index.jsx',
         './src/components/**/*.jsx',
       ],
       fontFace: false,
-      safelist: [],
+      safelist: cssSafelistClassArray,
     }),
   ],
 };
