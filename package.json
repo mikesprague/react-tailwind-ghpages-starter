@@ -32,7 +32,7 @@
   "dependencies": {
     "axios": "1.5.1",
     "cross-env": "7.0.3",
-    "daisyui": "3.9.1",
+    "daisyui": "3.9.2",
     "dayjs": "1.11.10",
     "dotenv": "16.3.1",
     "he": "1.2.0",
