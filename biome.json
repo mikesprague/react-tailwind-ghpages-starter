@@ -38,9 +38,11 @@
   },
   "javascript": {
     "formatter": {
-      "quoteProperties": "preserve",
+      "enabled": true,
       "arrowParentheses": "always",
+      "bracketSpacing": true,
       "jsxQuoteStyle": "double",
+      "quoteProperties": "preserve",
       "quoteStyle": "single",
       "semicolons": "always",
       "trailingComma": "es5"
