@@ -1,9 +1,8 @@
-import axios from 'axios';
 import { atom, useAtom } from 'jotai';
 import { useEffect } from 'react';
 import { FaGithub, FaQuoteLeft } from 'react-icons/fa';
 
-import './App.scss';
+import './App.css';
 
 const dataAtom = atom(null);
 
@@ -12,13 +11,11 @@ export default function App() {
 
   useEffect(() => {
     const getRemoteData = async () => {
-      const remoteData = await axios
-        .get('https://icanhazdadjoke.com', {
-          headers: {
-            Accept: 'application/json',
-          },
-        })
-        .then((response) => response.data);
+      const remoteData = await fetch('https://icanhazdadjoke.com', {
+        headers: {
+          Accept: 'application/json',
+        },
+      }).then((response) => response.json());
 
       setData(remoteData);
     };
@@ -30,14 +27,14 @@ export default function App() {
     <>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content text-center">
-          <div className="">
+          <div>
             <h1 className="text-5xl font-bold">
               React/Tailwind PWA Starter Template
             </h1>
             <blockquote className="mx-auto text-3xl italic leading-normal text-center text-blue-200">
               {data ? (
                 <>
-                  <FaQuoteLeft />
+                  <FaQuoteLeft className="inline mr-1 mb-2" />
                   {` ${data.joke}`}
                 </>
               ) : (
@@ -60,7 +57,7 @@ export default function App() {
       </div>
       <div className="fixed min-w-full text-base text-center bottom-2">
         <a href="https://github.com/mikesprague/react-tailwind-ghpages-starter">
-          <FaGithub />
+          <FaGithub className="inline" />
           {' Back to repo'}
         </a>
       </div>
