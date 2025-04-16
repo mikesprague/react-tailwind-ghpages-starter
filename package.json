@@ -30,7 +30,7 @@
   },
   "homepage": "https://mikesprague.github.io/react-tailwind-ghpages-starter",
   "dependencies": {
-    "daisyui": "5.0.20",
+    "daisyui": "5.0.22",
     "dayjs": "1.11.13",
     "dotenv": "16.5.0",
     "he": "1.2.0",
