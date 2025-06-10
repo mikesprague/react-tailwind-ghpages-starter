@@ -45,7 +45,7 @@
     "@biomejs/biome": "1.9.4",
     "@tailwindcss/typography": "0.5.16",
     "@tailwindcss/vite": "4.1.8",
-    "@vitejs/plugin-react-swc": "3.10.1",
+    "@vitejs/plugin-react-swc": "3.10.2",
     "cssnano": "7.0.7",
     "cz-git": "1.11.1",
     "stylelint": "16.20.0",
