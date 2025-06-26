@@ -44,7 +44,7 @@
   "devDependencies": {
     "@biomejs/biome": "2.0.5",
     "@tailwindcss/typography": "0.5.16",
-    "@tailwindcss/vite": "4.1.10",
+    "@tailwindcss/vite": "4.1.11",
     "@vitejs/plugin-react-swc": "3.10.2",
     "cssnano": "7.0.7",
     "cz-git": "1.11.2",
