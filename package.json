@@ -4,9 +4,10 @@
   "description": "Barebones starter for a React/Tailwind CSS PWA hosted via GitHub Pages. Uses GitHub Actions to build and deploy site.",
   "private": true,
   "engines": {
-    "node": ">= 20.x",
-    "npm": ">= 10.x"
+    "node": ">= 24.x",
+    "npm": ">= 11.x"
   },
+  "packageManager": "npm@11.11.0",
   "type": "module",
   "scripts": {
     "build": "npx vite build",
@@ -55,6 +56,9 @@
     "vite-plugin-html": "3.2.2",
     "vite-plugin-pwa": "1.2.0"
   },
+  "overrides": {
+    "serialize-javascript": "^7.0.4"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -73,7 +77,7 @@
     }
   },
   "volta": {
-    "node": "22.2.0",
-    "npm": "10.8.0"
+    "node": "25.7.0",
+    "npm": "11.11.0"
   }
 }
