@@ -7,7 +7,7 @@
     "node": ">= 24.x",
     "npm": ">= 11.x"
   },
-  "packageManager": "npm@11.12.0",
+  "packageManager": "npm@11.12.1",
   "type": "module",
   "scripts": {
     "build": "npx vite build",
@@ -36,7 +36,7 @@
     "dotenv": "17.4.2",
     "he": "1.2.0",
     "jotai": "2.19.1",
-    "nanoid": "5.1.7",
+    "nanoid": "5.1.9",
     "prop-types": "15.8.1",
     "react": "19.2.5",
     "react-dom": "19.2.5",
@@ -58,9 +58,9 @@
   },
   "overrides": {
     "glob": "^13.0.6",
-    "serialize-javascript": "^7.0.4",
+    "serialize-javascript": "^7.0.5",
     "vite": "8.0.8",
-    "yauzl": "^3.2.1"
+    "yauzl": "^3.3.0"
   },
   "browserslist": {
     "production": [
@@ -80,7 +80,7 @@
     }
   },
   "volta": {
-    "node": "25.8.1",
-    "npm": "11.12.0"
+    "node": "25.9.0",
+    "npm": "11.12.1"
   }
 }
