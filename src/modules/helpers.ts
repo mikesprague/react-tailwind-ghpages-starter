@@ -9,6 +9,6 @@ export function isDev() {
   return false;
 }
 
-export function handleError(error) {
+export function handleError(error: Error) {
   console.error(error);
 }

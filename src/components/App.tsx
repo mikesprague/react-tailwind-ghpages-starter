@@ -4,7 +4,13 @@ import { FaGithub, FaQuoteLeft } from 'react-icons/fa';
 
 import './App.css';
 
-const dataAtom = atom(null);
+const dataAtom = atom<ResponseData | null>(null);
+
+export type ResponseData = {
+  id: string;
+  joke: string;
+  status: number;
+};
 
 export default function App() {
   const [data, setData] = useAtom(dataAtom);
@@ -25,28 +31,28 @@ export default function App() {
 
   return (
     <>
-      <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content text-center">
+      <div className='hero min-h-screen bg-base-200'>
+        <div className='hero-content text-center'>
           <div>
-            <h1 className="text-5xl font-bold">
+            <h1 className='text-5xl font-bold'>
               React/Tailwind PWA Starter Template
             </h1>
-            <blockquote className="mx-auto text-3xl italic leading-normal text-center text-blue-200">
+            <blockquote className='mx-auto text-3xl italic leading-normal text-center text-blue-200'>
               {data ? (
                 <>
-                  <FaQuoteLeft className="inline mr-1 mb-2" />
+                  <FaQuoteLeft className='inline mr-1 mb-2' />
                   {` ${data.joke}`}
                 </>
               ) : (
                 '... loading dad joke ...'
               )}
             </blockquote>
-            <h2 className="my-12 text-2xl font-semibold leading-tight text-center">
-              <small className="text-base font-normal text-center">
+            <h2 className='my-12 text-2xl font-semibold leading-tight text-center'>
+              <small className='text-base font-normal text-center'>
                 <a
-                  href="https://icanhazdadjoke.com/api"
-                  rel="noopener noreferrer"
-                  target="_blank"
+                  href='https://icanhazdadjoke.com/api'
+                  rel='noopener noreferrer'
+                  target='_blank'
                 >
                   source: https://icanhazdadjoke.com/api
                 </a>
@@ -55,9 +61,9 @@ export default function App() {
           </div>
         </div>
       </div>
-      <div className="fixed min-w-full text-base text-center bottom-2">
-        <a href="https://github.com/mikesprague/react-tailwind-ghpages-starter">
-          <FaGithub className="inline" />
+      <div className='fixed min-w-full text-base text-center bottom-2'>
+        <a href='https://github.com/mikesprague/react-tailwind-ghpages-starter'>
+          <FaGithub className='inline' />
           {' Back to repo'}
         </a>
       </div>

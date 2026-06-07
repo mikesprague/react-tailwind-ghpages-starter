@@ -2,7 +2,7 @@ name: Production Build
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
     paths:
       - "src/**/*.*"
       - "public/**/*.*"
@@ -10,7 +10,7 @@ on:
       - "package-lock.json"
       - ".github/workflows/**.yml"
   pull_request:
-    branches: [ main ]
+    branches: [main]
     paths:
       - "src/**/*.*"
       - "public/**/*.*"
@@ -31,25 +31,25 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  NODE_VERSION: "20"
+  NODE_VERSION: ${{ vars.NODE_VERSION  || '26.x'}}
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: 👷 Checkout Repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        with:
+          persist-credentials: false
 
       - name: 🏗️ Setup Node.js ${{ env.NODE_VERSION }} environment
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
         with:
           node-version: ${{ env.NODE_VERSION }}
           check-latest: true
-          cache: npm
-          cache-dependency-path: "**/package-lock.json"
 
       - name: ⚡ Cache node_modules
-        uses: actions/cache@v5
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
         id: cache
         with:
           path: node_modules
@@ -59,16 +59,16 @@ jobs:
 
       - name: 🏗️ Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
-        run: npm ci
+        run: npm install
 
       - name: 🏗️ Build Site with Vite
         run: npm run build
 
       - name: 📦 Create and upload build artifact
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: pwa-artifact
-          path: 'build/'
+          path: "build/"
           retention-days: 1
 
   call-deploy-workflow:
