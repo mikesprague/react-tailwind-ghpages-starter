@@ -63,7 +63,7 @@
     "cssnano": "8.0.2",
     "cz-git": "1.13.1",
     "globals": "17.7.0",
-    "oxfmt": "0.57.0",
+    "oxfmt": "0.58.0",
     "oxlint": "1.72.0",
     "tailwindcss": "4.3.2",
     "typescript": "6.0.3",
