@@ -31,7 +31,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  NODE_VERSION: ${{ vars.NODE_VERSION  || '26.x'}}
+  NODE_VERSION: ${{ vars.NODE_VERSION || '26.x' }}
 
 jobs:
   build:
@@ -48,6 +48,9 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           check-latest: true
 
+      - name: 🏗️ Setup Nub
+        uses: nubjs/setup-nub@47e5e7393d50f4e9544ddaf756aa277972afba2d # v0.4.0
+
       - name: ⚡ Cache node_modules
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         id: cache
@@ -59,10 +62,10 @@ jobs:
 
       - name: 🏗️ Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
-        run: npm install
+        run: nub install
 
       - name: 🏗️ Build Site with Vite
-        run: npm run build
+        run: nub run build
 
       - name: 📦 Create and upload build artifact
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
