@@ -40,7 +40,7 @@
     "@nubjs/nub": "0.7.4",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
-    "dayjs": "1.11.21",
+    "dayjs": "1.11.23",
     "he": "1.2.0",
     "jotai": "2.20.2",
     "lucide-react": "1.30.0",
