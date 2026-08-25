@@ -63,7 +63,7 @@
     "@vitejs/plugin-react": "6.0.5",
     "cssnano": "8.0.4",
     "cz-git": "1.13.1",
-    "globals": "17.9.0",
+    "globals": "17.11.0",
     "oxfmt": "0.62.0",
     "oxlint": "1.77.0",
     "tailwindcss": "4.3.3",
